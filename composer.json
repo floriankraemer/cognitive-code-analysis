@@ -83,7 +83,7 @@
         ],
         "build-phar": [
             "if [ ! -f phive.phar ]; then wget -O phive.phar \"https://phar.io/releases/phive.phar\"; fi",
-            "if [ ! -f tools/box ]; then php phive.phar install humbug/box; fi",
+            "if [ ! -f tools/box ]; then php phive.phar install humbug/box --trust-gpg-keys; fi",
             "tools/box compile"
         ]
     }
